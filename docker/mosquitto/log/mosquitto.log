@@ -1,0 +1,24 @@
+1772640507: mosquitto version 2.1.2 starting
+1772640507: Config loaded from /mosquitto/config/mosquitto.conf.
+1772640507: Bridge support available.
+1772640507: Persistence support available.
+1772640507: TLS support available.
+1772640507: TLS-PSK support available.
+1772640507: Websockets support available.
+1772640507: Opening ipv4 listen socket on port 1883.
+1772640507: Opening ipv6 listen socket on port 1883.
+1772640507: mosquitto version 2.1.2 running
+1772640542: New connection from 172.18.0.1:42916 on port 1883.
+1772640542: New client connected from 172.18.0.1:42916 as auto-A58551BA-7300-0A22-8712-723201472AAA (p4, c1, k60).
+1772640592: Client auto-A58551BA-7300-0A22-8712-723201472AAA [172.18.0.1:42916] disconnected: connection closed by client.
+1772640705: New connection from 172.18.0.5:45917 on port 1883.
+1772640705: New client connected from 172.18.0.5:45917 as auto-4B566B12-9F35-B3B5-5857-3C41C50CBC3B (p4, c1, k60).
+1772640849: New connection from 172.18.0.1:55500 on port 1883.
+1772640849: New client connected from 172.18.0.1:55500 as auto-DFDD2FC3-61D3-5BB8-0181-770F66D7F0DA (p4, c1, k60).
+1772640886: Client auto-DFDD2FC3-61D3-5BB8-0181-770F66D7F0DA [172.18.0.1:55500] disconnected: connection closed by client.
+1772640970: Client auto-4B566B12-9F35-B3B5-5857-3C41C50CBC3B [172.18.0.5:45917] disconnected: connection closed by client.
+1772640971: New connection from 172.18.0.5:58861 on port 1883.
+1772640971: New client connected from 172.18.0.5:58861 as auto-8A2C2274-19D8-093E-6A08-35E5CC4E40B4 (p4, c1, k60).
+1772640977: New connection from 172.18.0.1:54432 on port 1883.
+1772640977: New client connected from 172.18.0.1:54432 as auto-0924AA01-BCF4-3D50-A524-F26EB51FB0E4 (p4, c1, k60).
+1772641011: Client auto-0924AA01-BCF4-3D50-A524-F26EB51FB0E4 [172.18.0.1:54432] disconnected.

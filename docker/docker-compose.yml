@@ -1,0 +1,49 @@
+services:
+  # Broker MQTT
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  # Base de datos para series temporales
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    env_file:
+      - .env
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+
+  # Visualización de datos
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+  bridge:
+      build: .
+      container_name: mqtt_bridge
+      depends_on:
+        - mosquitto
+        - influxdb
+      environment:
+        - MQTT_BROKER=mosquitto
+        - INFLUXDB_URL=http://influxdb:8086
+      restart: always
+
+volumes:
+  influxdb_data:
+  grafana_data:
